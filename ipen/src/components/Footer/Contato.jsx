@@ -26,7 +26,7 @@ const Contato = () => {
                   Email | atendimento@ipensaude.com.br
                 </li>
                 <li className='flex mt-[20px] justify-center md:justify-normal	'>
-                  <a className='mr-[20px]' href="https://www.instagram.com/ipensaude/" target='_blank' rel='noopener noreferrer'><AiOutlineInstagram size={30} /></a>
+                  <a className='mr-[20px]' href="https://www.instagram.com/ipensaude" target='_blank' rel='noopener noreferrer'><AiOutlineInstagram size={30} /></a>
                   <a className='mr-[20px]' href={mailtoLink} target='_blank' rel='noopener noreferrer'><AiOutlineMail size={30}  /></a>
                   <a className='mr-[20px]' href={whatsappLink} target="_blank" rel="noopener noreferrer"><AiOutlineWhatsApp size={30} /></a>
                 </li>
