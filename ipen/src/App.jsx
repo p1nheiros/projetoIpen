@@ -1,7 +1,7 @@
 import React from 'react'
 import { Home } from './components/Home'
 import { Navbar } from './components/Navbar'
-import Footer from './components/Footer'
+import Footer from './components/Footer/Footer'
 
 import './styles/global.css'
 
