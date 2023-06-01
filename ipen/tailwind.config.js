@@ -1,11 +1,23 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
+module.exports = {
+    content: [
+        './src/pages/**/*.{js,ts,jsx,tsx}',
+        './src/components/**/*.{js,ts,jsx,tsx}',
+        './src/app/**/*.{js,ts,jsx,tsx}',
+    ],
+    theme: {
+        extend: {},
+        colors: {
+            'red': '#FF0000',
+            'gray': '#BBBBBB',
+            'black': '#000000',
+            'white': '#FFFFFF',
+            'darkGreen': '#04716C',
+            'lightGreen': '#08AD8F'
+        },
+        fontFamily: {
+            'poppins': ['poppins'],
+        },
+    },
+    plugins: [],
 }
