@@ -7,7 +7,7 @@ import './styles/global.css'
 
 function App() {
   return (
-    <div>
+    <div className='font-poppins'>
       <Navbar/>
       <Home/>
       <Footer/>
