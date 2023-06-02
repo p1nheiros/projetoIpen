@@ -1,15 +1,18 @@
-import React from 'react'
-import Título from './Título'
+import React from "react";
+import Título from "./Título";
+import MySwiperSlide from "./Swiper";
 
 const Galeria = () => {
   return (
     <>
-    <div className='min-h-screen flex justify-center items-center bg-lightGreen'>
+      <div className="min-h-screen flex-col justify-center items-start">
         <Título />
-        Galeria
-    </div>
+        <div className="ml-[40px]">
+        <MySwiperSlide />
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Galeria
+export default Galeria;

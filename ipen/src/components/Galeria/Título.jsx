@@ -2,7 +2,12 @@ import React from "react";
 
 const Título = () => {
   return (
-  <div>Ola Mundo</div>
+    <>
+      <div className="items-start flex-col text-center text-darkGreen"> 
+        <h1 className="font-medium text-[72px]">Galeria</h1>
+        <p className="font-medium text-[24px]">Espaço humanizado e capacitado</p>
+      </div>
+    </>
   );
 };
 
