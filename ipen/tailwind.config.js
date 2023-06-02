@@ -13,7 +13,8 @@ module.exports = {
             'black': '#000000',
             'white': '#FFFFFF',
             'darkGreen': '#04716C',
-            'lightGreen': '#08AD8F'
+            'lightGreen': '#08AD8F',
+            'lightGreen2': '#08AD8F'
         },
         fontFamily: {
             'poppins': ['poppins'],
