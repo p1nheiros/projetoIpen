@@ -5,16 +5,16 @@ export const Home = () => {
         <div className="text-black bg-[url('../img/imageBG2.png')] min-h-screen bg-cover bg-center bg-no-repeat">
             <div className='max-w-[75%] mt-[96px] w-full h-screen mx-auto'>
                 <div style={{ paddingTop: '9rem' }}>
-                    <h1 className='text-darkGreen text-8xl sm:text-6xl md:text-9xl font-bold flex'>
+                    <h1 className='text-darkGreen text-8xl sm:text-6    xl md:text-8xl font-bold flex lg:text-9xl xl:text-9xl 2xl:text-9xl'>
                         IPEN
                     </h1>
 
-                    <p className='text-gray text-base sm:text-2xl md:text-3xl'>
+                    <p className='text-gray text-base text-xl md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl'>
                         Instituto de Pediatria e Neurologia Infantil
                     </p>
                 </div>
                 <div style={{ paddingTop: '3rem' }}>
-                    <p className='text-white text-3xl sm:text-4xl md:text-6xl' style={{ lineHeight: "1.2" }}>
+                    <p className='text-white text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl' style={{ lineHeight: "1.2" }}>
                         Clínica Médica <br />
                         Especializada em Pediatria <br />
                         e Neurologia Infantil

@@ -15,12 +15,12 @@ export const Navbar = () => {
         LOGO
       </h1>
       <ul className='hidden md:flex text-xl'>
-        <li className='p-5'>Início</li>
-        <li className='p-5'>Clínica</li>
-        <li className='p-5'>Serviços</li>
-        <li className='p-5'>Médicos</li>
-        <li className='p-5'>Galeria</li>
-        <li className='p-5'>Contato</li>
+        <li className='p-5 cursor-pointer'>Início</li>
+        <li className='p-5 cursor-pointer'>Clínica</li>
+        <li className='p-5 cursor-pointer'>Serviços</li>
+        <li className='p-5 cursor-pointer'>Médicos</li>
+        <li className='p-5 cursor-pointer'>Galeria</li>
+        <li className='p-5 cursor-pointer'>Contato</li>
       </ul>
       <div onClick={handleNav} className='block md:hidden'>
         {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
@@ -30,6 +30,7 @@ export const Navbar = () => {
           LOGO
         </h1>
         <ul className='p-4 uppercase'>
+          <li className='p-4 border-b border-gray'>Início</li>
           <li className='p-4 border-b border-gray'>Clínica</li>
           <li className='p-4 border-b border-gray'>Serviços</li>
           <li className='p-4 border-b border-gray'>Médicos</li>
