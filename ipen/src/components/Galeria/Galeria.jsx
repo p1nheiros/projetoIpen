@@ -5,11 +5,9 @@ import MySwiperSlide from "./Swiper";
 const Galeria = () => {
   return (
     <>
-      <div className="min-h-screen flex-col justify-center items-start">
+      <div className="min-h-screen flex-col justify-center items-start static">
         <Título />
-        <div className="ml-[40px]">
         <MySwiperSlide />
-        </div>
       </div>
     </>
   );

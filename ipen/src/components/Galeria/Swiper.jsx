@@ -1,40 +1,57 @@
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-
-// import required modules
-import { Pagination } from "swiper";
-
+import React, { useEffect } from "react";
+import Swiper from "swiper";
+import "swiper/swiper-bundle.min.css";
 
 const MySwiperSlide = () => {
+  useEffect(() => {
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+      },
+    });
+
+    return () => {
+      swiper.destroy();
+    };
+  }, []);
+
   return (
-    <div className="relative">
-    <Swiper
-      slidesPerView={4}
-      centeredSlides={true}
-      spaceBetween={30}
-      grabCursor={true}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Pagination]}
-      className="mySwiper"
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
-      <SwiperSlide>Slide 6</SwiperSlide>
-      <SwiperSlide>Slide 7</SwiperSlide>
-      <SwiperSlide>Slide 8</SwiperSlide>
-      <SwiperSlide>Slide 9</SwiperSlide>
-    </Swiper>
-    </div>
+    <>
+      <style>
+        {`
+          .swiper-container {
+            height: 500px;
+          }
+          .swiper-slide {
+            background: lightGreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        `}
+      </style>
+      <div className="swiper-container">
+        <div className="swiper-wrapper">
+          <div className="swiper-slide">Slide 1</div>
+          <div className="swiper-slide">Slide 2</div>
+          <div className="swiper-slide">Slide 3</div>
+          ...
+        </div>
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-scrollbar"></div>
+      </div>
+    </>
   );
 };
 
-export default MySwiperSlide
+export default MySwiperSlide;
