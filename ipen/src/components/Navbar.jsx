@@ -12,12 +12,12 @@ export const Navbar = () => {
     <div className='flex justify-between items-center h-24 max-w-screen mx-auto px-14 text-white fixed top-0 left-0 right-0 bg-darkGreen font-poppins'>
       <h1 className='w-full text-3xl font-bold text-lightGreen'>LOGO</h1>
       <ul className='hidden md:flex text-xl'>
-        <li className='p-5'>Início</li>
-        <li className='p-5'>Clínica</li>
-        <li className='p-5'>Serviços</li>
-        <li className='p-5'>Médicos</li>
-        <li className='p-5'>Galeria</li>
-        <li className='p-5'>Contato</li>
+        <li className='p-5 cursor-pointer'>Início</li>
+        <li className='p-5 cursor-pointer'>Clínica</li>
+        <li className='p-5 cursor-pointer'>Serviços</li>
+        <li className='p-5 cursor-pointer'>Médicos</li>
+        <li className='p-5 cursor-pointer'>Galeria</li>
+        <li className='p-5 cursor-pointer'>Contato</li>
       </ul>
       <div onClick={handleNav} className='block md:hidden'>
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
