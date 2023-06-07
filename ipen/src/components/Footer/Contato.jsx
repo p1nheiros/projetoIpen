@@ -15,20 +15,20 @@ const Contato = () => {
   return (
         <div className="">
               <ul className="font-medium text-3xl text-white leading-loose mr-0 md:mr-[200px] mb-[50px] md:mb-0">
-                <li>Contato</li>
+                <li className='select-none'>Contato</li>
                 <li className="text-lg font-normal">
                   Whatsapp | (11) 99817-5795
                 </li>
-                <li className="text-lg font-normal">
+                <li className="text-lg font-normal" style={{ paddingTop: '0.5rem' }}>
                   Telefone Fixo | (11) 4221-1806
                 </li>
-                <li className="text-lg font-normal">
+                <li className="text-lg font-normal" style={{ paddingTop: '0.5rem' }}>
                   Email | atendimento@ipensaude.com.br
                 </li>
-                <li className='flex mt-[20px] justify-center md:justify-normal	'>
-                  <a className='mr-[20px]' href="https://www.instagram.com/ipensaude" target='_blank' rel='noopener noreferrer'><AiOutlineInstagram size={30} /></a>
-                  <a className='mr-[20px]' href={mailtoLink} target='_blank' rel='noopener noreferrer'><AiOutlineMail size={30}  /></a>
-                  <a className='mr-[20px]' href={whatsappLink} target="_blank" rel="noopener noreferrer"><AiOutlineWhatsApp size={30} /></a>
+                <li className='flex mt-[20px] justify-center md:justify-normal' style={{ paddingTop: '0.1rem' }}>
+                  <a className='mr-[20px] hover:text-lightGray' href="https://www.instagram.com/ipensaude/" target='_blank' rel='noopener noreferrer'><AiOutlineInstagram size={35} /></a>
+                  <a className='mr-[20px] hover:text-lightGray' href={mailtoLink} target='_blank' rel='noopener noreferrer'><AiOutlineMail size={35}  /></a>
+                  <a className='mr-[20px] hover:text-lightGray' href={whatsappLink} target="_blank" rel="noopener noreferrer"><AiOutlineWhatsApp size={35} /></a>
                 </li>
               </ul>
             </div>

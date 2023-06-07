@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Home = () => {
   return (
-    <div className="text-black bg-[url('../img/imageBG2.png')] min-h-screen bg-cover bg-center bg-no-repeat">
+    <div className="text-black bg-[url('../img/imageBG2.png')] min-h-screen bg-cover bg-center bg-no-repeat select-none">
       <div className='max-w-[75%] mt-[96px] w-full h-screen mx-auto'>
         <div style={{ paddingTop: '9rem' }}>
           <h1 className='text-darkGreen text-8xl sm:text-6xl md:text-9xl font-bold flex'>
@@ -22,10 +22,10 @@ export const Home = () => {
         </div>
         <div style={{ paddingTop: '4rem' }}>
           <div className='gap-12 flex flex-col sm:flex-row'>
-            <button className='text-white bg-darkGreen rounded-full hover:bg-lightGreen py-2 sm:py-4 px-4 sm:px-12 text-xl sm:text-3xl'>
+            <button className='text-white bg-darkGreen rounded-full hover:bg-lightGreen2 py-2 sm:py-4 px-4 sm:px-12 text-xl sm:text-3xl'>
               Agendar Consulta
             </button>
-            <button className='bg-white text-darkGreen rounded-full hover:bg-gray py-2 sm:py-4 px-4 sm:px-12 text-xl sm:text-3xl'>
+            <button className='bg-white text-darkGreen rounded-full hover:bg-lightGray py-2 sm:py-4 px-4 sm:px-12 text-xl sm:text-3xl'>
               Mais Informações
             </button>
           </div>
