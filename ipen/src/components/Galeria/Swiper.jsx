@@ -1,57 +1,87 @@
-import React, { useEffect } from "react";
-import Swiper from "swiper";
-import "swiper/swiper-bundle.min.css";
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const MySwiperSlide = () => {
-  useEffect(() => {
-    const swiper = new Swiper(".swiper", {
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      scrollbar: {
-        el: ".swiper-scrollbar",
-      },
-    });
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
 
-    return () => {
-      swiper.destroy();
-    };
-  }, []);
+// import required modules
+import { Pagination } from "swiper";
 
+export default function MySwiperSlide() {
   return (
     <>
       <style>
         {`
-          .swiper-container {
-            height: 500px;
-          }
-          .swiper-slide {
-            background: lightGreen;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-        `}
+        .swiper-pagination-bullet{
+          padding: 7px;
+        }`}
       </style>
-      <div className="swiper-container">
-        <div className="swiper-wrapper">
-          <div className="swiper-slide">Slide 1</div>
-          <div className="swiper-slide">Slide 2</div>
-          <div className="swiper-slide">Slide 3</div>
-          ...
-        </div>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
-        <div className="swiper-scrollbar"></div>
+      <div className="relative bg-lightGreen text-lg mx-[40px] p-0">
+        <Swiper
+          slidesPerView={1}
+          spaceBetween={10}
+          pagination={{
+            clickable: true,
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 10,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1280: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+            1536: {
+              slidesPerView: 5,
+              spaceBetween: 50,
+            },
+          }}
+          modules={[Pagination]}
+          className="mySwiper w-11/12"
+        >
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 1 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 2 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 3 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 4 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 5 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 6 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 7 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex justify-center items-center my-[40px] mb-[60px] rounded-lg">
+            Slide 8 
+          </SwiperSlide> 
+          <SwiperSlide className="text-center bg-darkGreen flex items-center justify-center  my-[40px] mb-[60px] rounded-lg">
+            Slide 9
+          </SwiperSlide>
+          <SwiperSlide className="text-center bg-darkGreen flex items-center justify-center  my-[40px] mb-[60px] rounded-lg">
+            Slide 10
+          </SwiperSlide>
+        </Swiper>
       </div>
     </>
   );
-};
-
-export default MySwiperSlide;
+}
