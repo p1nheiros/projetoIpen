@@ -9,7 +9,7 @@ export const Navbar = () => {
   };
 
   return (
-    <div className='flex justify-between items-center h-24 max-w-screen mx-auto px-14 text-white fixed top-0 left-0 right-0 bg-darkGreen font-poppins select-none'>
+    <div className='flex justify-between items-center h-24 max-w-screen mx-auto px-14 text-white fixed top-0 left-0 right-0 bg-darkGreen font-poppins select-none z-50'>
       <h1 className='w-full text-3xl font-bold text-lightGreen'>LOGO</h1>
       <ul className='hidden md:flex text-xl'>
         <li className='p-5 cursor-pointer hover:text-lightGray'>Início</li>
