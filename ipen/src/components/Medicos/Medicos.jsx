@@ -4,7 +4,7 @@ import Titulo from './Titulo'
 export const Medicos = () => {
   return (
     <>
-    <div className='min-h-screen flex-col justify-center bg-darkGreen text-white'>
+    <div className='min-h-screen flex-col justify-center items-start static bg-darkGreen'>
       <Titulo />
     </div>
     </>
