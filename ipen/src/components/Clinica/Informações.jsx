@@ -6,13 +6,13 @@ const Informações = () => {
   return (
     <>
       {/* Grade 1 (principal) */}
-      <div className="w-full md:w-11/12 grid grid-cols lg:grid-cols-2 justify-center items-center gap-4 my-[40px]">
+      <div className="w-full md:w-11/12 grid grid-cols lg:grid-cols-2 justify-center items-center gap-20 my-[40px]">
         {/* Informações */}
         {/* A organização aqui ficará da seguinte forma uma grid com 1 coluna concatenada a uma grid com 2 colunas, juntamente com uma outra grid de 2 colunas para o horário */}
         {/* Grid 1 coluna */}
         <div className="grid grid-cols mx-[80px] md:mx-0">
           {/* Título */}
-          <p className="text-white text-xl text-center md:text-left md:ml-[20px] lg:ml-[40px] xl:ml-[60px]">
+          <p className="text-white text-xl text-center md:text-left md:ml-[100px] lg:ml-[80px] xl:ml-[90px]">
             Somos o Instituto de Pediatria e Neurologia Infantil. Nos dedicamos
             à saúde e bem estar dos nossos pequenos.
           </p>
@@ -44,15 +44,15 @@ const Informações = () => {
               </div>
               <div className="grid grid-cols">
                 <p className="text-white text-xl">
-                  8:00 as 18:00 - Segunda a Sexta
+                  8:00 às 18:00 - Segunda a Sexta
                 </p>
-                <p className="text-white text-xl">9:00 as 12:00 - Sábado</p>
+                <p className="text-white text-xl">9:00 às 12:00 - Sábado</p>
               </div>
             </div>
           </div>
         </div>
         {/* Imagem*/}
-        <div className="hidden lg:flex">
+        <div className="p-[40px] hidden lg:flex">
           <img
             className="rounded-2xl"
             src={imagemPacienteMedico}
