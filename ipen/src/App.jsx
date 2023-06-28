@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home2 } from './components/Home/Home2'
+import { Home } from './components/Home/Home'
 import { Navbar } from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Galeria from './components/Galeria/Galeria'
@@ -12,13 +12,13 @@ import './styles/global.css'
 function App() {
   return (
     <div className='font-poppins'>
-      <Navbar/>
-      <Home2/>
+      <Navbar />
+      <Home />
       <Clinica />
       <Serviços />
       <Medicos />
       <Galeria />
-      <Footer/>
+      <Footer />
     </div>
   )
 }
