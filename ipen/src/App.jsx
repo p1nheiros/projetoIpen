@@ -5,7 +5,7 @@ import Footer from './components/Footer/Footer'
 import Galeria from './components/Galeria/Galeria'
 import Clinica from './components/Clinica/Clinica'
 import { Serviços } from './components/Serviços'
-import { Medicos } from './components/Medicos/Medicos'
+import  Medicos  from './components/Medicos/Medicos'
 
 import './styles/global.css'
 
