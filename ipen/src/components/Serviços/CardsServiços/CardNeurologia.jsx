@@ -2,6 +2,11 @@ import React from 'react'
 import { BsFillHeartPulseFill } from "react-icons/bs";
 
 export const CardNeurologia = () => {
+
+    const phoneNumber = "+5511998175795";
+    const message = "Olá, estou entrando em contato com a Clínica IPEN. Gostaria de obter mais informações sobre a consulta de Neurologia!";
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
     return (
         <>
             <a class="rounded-3xl inline-block overflow-hidden shadow-xl max-w-xs select-none transition ease-in-out hover:-translate-y-1 hover:scale-102 duration-300">
@@ -24,9 +29,13 @@ export const CardNeurologia = () => {
                     </div>
                     <div class="flex justify-center pb-3 text-slate-700">
                         <div class="text-center mr-3 pr-3 last:border-r-0">
-                            <button className='bg-darkGreen text-white rounded-full hover:bg-lightGreen2 text-xl py-2 px-11 ml-6 md:text-xl md:py-3 md:px-8 md:ml-8'>
-                                Agendar Consulta
-                            </button>
+                            <a href={whatsappLink}
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <button className='bg-darkGreen text-white rounded-full hover:bg-lightGreen2 text-xl py-2 px-11 ml-6 md:text-xl md:py-3 md:px-8 md:ml-8'>
+                                    Agendar Consulta
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </div>

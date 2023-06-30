@@ -1,69 +1,74 @@
-import React, { useState } from 'react';
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { RxDotFilled } from 'react-icons/rx';
+import React, { useState, useEffect } from "react";
+import { MdOutlineArrowBackIos, MdOutlineArrowForwardIos } from "react-icons/md";
 
 const MedicosSlider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [numVisibleSlides, setNumVisibleSlides] = useState(3);
   const slides = [
-    {
-      url: 'https://images.unsplash.com/photo-1464093515883-ec948246accb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2659&q=80',
-      title: 'Lobster',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1512132411229-c30391241dd8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-      title: 'Sushi',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-      title: 'Pasta',
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1539136788836-5699e78bfc75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80',
-      title: 'Salmon',
-    },
+    <div className="bg-[url('../img/medicoImgUm.png')] bg-cover bg-center bg-no-repeat h-full w-full rounded-lg" />,
+    <div className="bg-[url('../img/medicoImgDois.png')] bg-cover bg-center bg-no-repeat h-full w-full rounded-lg" />,
+    <div className="bg-[url('../img/medicoImgTres.png')] bg-cover bg-center bg-no-repeat h-full w-full rounded-lg" />,
+    <div className="bg-[url('../img/medicoImgQuatro.png')] bg-cover bg-center bg-no-repeat h-full w-full rounded-lg" />,
+    "Slide 5",
+    "Slide 6",
+    "Slide 7",
+    "Slide 8",
+    "Slide 9",
+    "Slide 10"
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
   const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
+    setCurrentSlide((prev) => (prev === 0 ? slides.length - numVisibleSlides : prev - 1));
   };
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === slides.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
+    setCurrentSlide((prev) => (prev === slides.length - numVisibleSlides ? 0 : prev + 1));
   };
 
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setNumVisibleSlides(1);
+      } else {
+        setNumVisibleSlides(3);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-
-    <div className='bg-darkGreen max-w-[1400px] h-[580px] w-full m-auto py-16 md:py-2 px-4 relative group'>
-      <div
-        className='w-full h-full rounded-2xl bg-center bg-cover duration-500'
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-      ></div>
-      {/* Left Arrow */}
-      <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 group-hover:bg-black/20 text-white cursor-pointer'>
-        <BsChevronCompactLeft onClick={prevSlide} size={30} />
-      </div>
-      {/* Right Arrow */}
-      <div className='absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 group-hover:bg-black/20 text-white cursor-pointer'>
-        <BsChevronCompactRight onClick={nextSlide} size={30} />
-      </div>
-
-      <div className='flex top-4 justify-center py-2'>
-        {slides.map((slide, slideIndex) => (
+    <div className="relative">
+      <div className="flex overflow-hidden">
+        {slides.slice(currentSlide, currentSlide + numVisibleSlides).map((slide, index) => (
           <div
-            className='text-2xl cursor-pointer'
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
+            key={index}
+            className={`w-[320px] h-[360px] md:w-[400px] md:h-[480px] ${numVisibleSlides === 1 ? "mx-auto" : "mr-4"
+              } bg-lightGreen rounded-lg flex-shrink-0 relative`}
           >
-            <RxDotFilled />
+            {/* Coloque o conteúdo do slide aqui */}
+            {slide}
+            {index === 0 && (
+              <button
+                className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white bg-gray px-3 py-3 rounded-full"
+                onClick={prevSlide}
+              >
+                <MdOutlineArrowBackIos size={24} />
+              </button>
+            )}
+            {index === numVisibleSlides - 1 && (
+              <button
+                className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white bg-gray px-3 py-3 rounded-full"
+                onClick={nextSlide}
+              >
+                <MdOutlineArrowForwardIos size={24} />
+              </button>
+            )}
           </div>
         ))}
       </div>

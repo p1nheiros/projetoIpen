@@ -1,6 +1,11 @@
 import React from 'react'
 
-const HomeTitulo = () => {
+const HomeConteudo = () => {
+
+    const phoneNumber = "+5511998175795";
+    const message = "Olá, estou entrando em contato com a Clínica IPEN. Gostaria de obter mais informações sobre os serviços oferecidos!";
+    const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
     return (
         <>
             <div className='absolute top-0 w-full h-full flex flex-col justify-center'>
@@ -18,9 +23,14 @@ const HomeTitulo = () => {
                     </h3>
                     <div className='flex flex-col md:flex-row'>
                         <div>
-                            <button className='text-white bg-darkGreen rounded-full hover:bg-lightGreen2 text-2xl py-3 px-14 md:text-3xl md:py-4 md:px-12'>
-                                Agendar Consulta
-                            </button>
+                            <a href={whatsappLink}
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                <button className='text-white bg-darkGreen rounded-full hover:bg-lightGreen2 text-2xl py-3 px-14 md:text-3xl md:py-4 md:px-12'
+                                    href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                                    Agendar Consulta
+                                </button>
+                            </a>
                         </div>
                         <div className='pt-6 md:pt-0'>
                             <button className='bg-white text-darkGreen rounded-full hover:bg-lightGray text-2xl py-3 px-14 md:text-3xl md:py-4 md:px-12 md:ml-8'>
@@ -34,4 +44,4 @@ const HomeTitulo = () => {
     );
 };
 
-export default HomeTitulo;
+export default HomeConteudo;

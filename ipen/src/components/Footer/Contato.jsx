@@ -5,7 +5,7 @@ import { AiOutlineInstagram, AiOutlineMail, AiOutlineWhatsApp } from 'react-icon
 const Contato = () => {
 
     const phoneNumber = "+5511998175795";
-    const message = "Olá, estou entrando em contato com a Clínica IPEN. Gostaria de obter mais informações sobre os serviços oferecidos. Aguardo retorno. Obrigado!";
+    const message = "Olá, estou entrando em contato com a Clínica IPEN. Gostaria de obter mais informações sobre os serviços oferecidos!";
     const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
     const email = "atendimento@ipensaude.com.br";
