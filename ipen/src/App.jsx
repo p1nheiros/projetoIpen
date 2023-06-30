@@ -1,5 +1,5 @@
 import React from 'react'
-import { Home } from './components/Home/Home'
+import { Inicio } from './components/Inicio/Inicio'
 import { Navbar } from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Galeria from './components/Galeria/Galeria'
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className='font-poppins'>
       <Navbar />
-      <Home />
+      <Inicio />
       <Clinica />
       <Serviços />
       <Medicos />
