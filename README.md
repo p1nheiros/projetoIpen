@@ -13,7 +13,7 @@
 
 <br />
 
-![ipen-banner-rep](https://github.com/p1nheiros/projetoIpen/assets/124714182/fd5f3d25-ac18-4144-b5d6-e8a4d10d2fca)
+![ipen-banner-rep](https://github.com/p1nheiros/projetoIpen/assets/124714182/82e9a4ae-c1e3-4483-959d-abf811a2bae1)
 
 ### 📋 Pré-requisitos
 
