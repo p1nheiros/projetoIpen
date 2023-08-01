@@ -5,7 +5,7 @@
 
   <h1 align="center">Website Institucional para Clínica Médica</h1>
 
-  Wesite Institucional para Clínica Médica totalmente responsivo para todos os dispositivos, construído com React JS e Tailwind.
+  > Wesite Institucional para Clínica Médica totalmente responsivo para todos os dispositivos, construído com React JS e Tailwind.
 
   <a href="https://github.com/p1nheiros/projetoIpen"><strong>➥ Visualizar Projeto</strong></a>
 
